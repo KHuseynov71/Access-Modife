@@ -46,11 +46,13 @@ namespace AccessMofie_2.Models
         public Singer Singer { get; set; }
         public void AddRating(double Rating)
         {
-          
+            this.Rating = Rating;
         }
-        public double GetAverageRating()
+        public double GetAverageRating(double Rating)
         {
-            return 0;
+            double Avarage = 0;
+            Avarage = (this.Rating + Rating) / 2;
+            return Avarage;
         }
     }
 }
